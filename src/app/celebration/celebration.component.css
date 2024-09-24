@@ -1,16 +1,23 @@
-/*  #DE8500 -- orange 
-  #12AA04; --- greeen
-  #D9D9D9  -- grey*/
-
 * {
   margin: 0;
   padding: 0;
+}
+
+.container-fluid{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .upperHeading {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.donationComponent{
+  width: 100%;
 }
 
 .donationComponent h2 {

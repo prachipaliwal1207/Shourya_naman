@@ -24,17 +24,19 @@ export class LoginComponent implements OnInit {
       "email": this.email,
       "password": this.password
     };
-
-    this.apiService.login(data).subscribe((res:any) => {
-     this.apiService.getRegisterData(res.message).subscribe((data:any)=>{
-      localStorage.setItem("userId", data.id);
-      localStorage.setItem("userEmail", data.email);
-      localStorage.setItem("userData", JSON.stringify(data));
-      this.router.navigate(['/dashboard']);
-     })
-
-    }, (error: any) => {
-      this.errorMessage = true;
-    });
   }
+
+
+    // this.apiService.login(data).subscribe((res:any) => {
+    //  this.apiService.getRegisterData(res.message).subscribe((data:any)=>{
+    //   localStorage.setItem("userId", data.id);
+    //   localStorage.setItem("userEmail", data.email);
+    //   localStorage.setItem("userData", JSON.stringify(data));
+    // this.router.navigate(['/dashboard']);
+    //  })
+
+//     }, (error: any) => {
+//       this.errorMessage = true;
+//     });
+//   }
 }

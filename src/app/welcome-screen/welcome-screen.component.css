@@ -1,65 +1,62 @@
-.cmainBlock{
-    flex-wrap: wrap;
-    min-height: 100vh;
-    height: 100px;
-    min-width: 100vw;
-    width: 50px;
-    overflow: hidden;
+.mainBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: auto;
+    width: 100%;
+    padding: 10px;
+}
+
+.welcome_img {
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 
 .welcome_img img {
-    width: 330px;
-    height: 310px;
-    top: 100px;
-    padding: 52px, 11px, 52px, 11px;
+    width: 100%;
+    max-width: 18rem;
+    height: 18rem;
     border-radius: 20px;
-    gap: 10px;
-}
-
-.rectangle {
-    z-index: 1;
 }
 
 .welcome_text {
     font-family: "Poppins", sans-serif;
-    z-index: 2;
-    bottom: 80px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .welcome_text h2 {
     font-weight: 600;
-    font-size: 30px;
-    line-height: 40px;
+    font-size: 24px;
+    line-height: 32px;
     color: #12AA04;
-    text-align: center;
 }
 
 .welcome_text p {
     font-size: 14px;
     font-weight: 400;
     line-height: 21px;
-    letter-spacing: 0em;
     text-align: center;
 }
 
 .submit_btn {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     width: 100%;
     max-width: 320px;
-    height: 50px;
     gap: 15px;
-    z-index: 2;
-    margin-left: 10px;
-    margin-top: 12px;
 }
 
-input{
-    padding: 15px, 20px, 15px, 20px;
+input {
+    padding: 15px 20px;
     border-radius: 10px;
     color: white;
     flex: 1;
-    border: none;
+    border: 2px solid transparent;
+    font-size: 16px;
+    transition: background 0.3s ease, transform 0.3s ease, border 0.3s ease; /* Smooth transition */
 }
 
 .loginBtn {
@@ -68,4 +65,41 @@ input{
 
 .registerBtn {
     background-color: #12AA04;
+}
+
+/* Hover Effects */
+.loginBtn:hover {
+    background: #C97900;
+    transform: translateY(-2px); 
+    border: 2px solid #FFD600;
+}
+
+.registerBtn:hover {
+    background-color: #109A03;
+    transform: translateY(-2px);
+    border: 2px solid #A2D600; 
+}
+
+@media (max-width: 768px) {
+    .welcome_text h2 {
+        font-size: 20px;
+    }
+
+    .welcome_text p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .welcome_text h2 {
+        font-size: 18px;
+    }
+
+    .welcome_text p {
+        font-size: 10px;
+    }
+
+    .submit_btn {
+        flex-direction: column;
+    }
 }

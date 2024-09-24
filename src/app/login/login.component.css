@@ -1,14 +1,27 @@
-.loginBlock{
-    margin: 0;
+* {
     padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: "Poppins", sans-serif;
-    font-size: 14px;
+}
+
+.loginBlock {
+    padding: 20px;
+}
+
+.loginBlockInput {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .welcome_text {
-    font-family: "Poppins", sans-serif;
-    z-index: 2;
-    margin-top: 35px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .welcome_text h2 {
@@ -16,44 +29,52 @@
     font-size: 30px;
     line-height: 40px;
     color: #12AA04;
-    text-align: center;
 }
 
 .welcome_text p {
     font-size: 14px;
     font-weight: 400;
     line-height: 21px;
-    text-align: center;
 }
 
-input {
-    background-color: #F1F4FF;
-    width: 90%;
-    color: black;
-    margin: 1rem 1.5rem;
+.form {
+    width: 100%;
+    max-width: 400px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.form_div {
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.form_div input {
+    flex-grow: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
     border-radius: 7px;
-    border: none;
+    background-color: #F1F4FF;
+    transition: border-color 0.3s;
 }
 
-::placeholder {
-    color: #626262;
+
+.form_div input:focus {
+    border-color: #12AA04;
+    outline: none;
 }
 
-input[type="email"] {
-    padding: 12px;
-}
-
-input[type="password"] {
-    padding: 12px;
+.textDanger {
+    color: red;
+    font-size: 0.8rem;
     margin-top: 5px;
-}
-
-.forgot {
-    color: #12AA04;
-    font-size: 14px;
-    font-weight: bold;
-    margin-left: 150px;
-    cursor: pointer;
 }
 
 input[type="submit"] {
@@ -61,39 +82,43 @@ input[type="submit"] {
     color: white;
     padding: 12px;
     font-weight: bold;
-}
-
-.create{
-    text-align: center;
-    font-size: 14px;
+    border: none;
+    border-radius: 7px;
     cursor: pointer;
-}
-
-.textDanger{
-    margin-left: 20px;
-    margin-top: -10px;
-    color: red;
-    font-weight: bold;
- }
-
- .alert-danger{
-    font-size: 13px;
+    transition: background-color 0.3s;
     width: 100%;
-    max-width: 280px;
-    margin-left: 40px;
-    white-space: nowrap; 
-    display: inline-block;
 }
 
-.alert-danger button{
-    margin-left: 3px;
+input[type="submit"]:hover {
+    background: #c87a00;
 }
 
-.alert-danger .close {
-    padding: 0.1rem 0.2rem; 
-    height: 22px;
+.create {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #12AA04;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 8px;
 }
 
-.alert-danger.close span {
-    margin-left: 0.1rem;
+.forgot {
+    text-align: center;
+    margin: 10px 0;
+    color: #12AA04;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.alert {
+    margin: 0 auto;
+    padding: 12px;
+    width: 25rem;
+    font-size: .8rem;
+}
+
+.alert button {
+    border-radius: 50%;
+    margin-left: 10rem;
+    width: 1.3rem;
 }

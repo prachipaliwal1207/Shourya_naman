@@ -1,92 +1,76 @@
-.loginBlock {
-    margin: 0;
+* {
     padding: 0;
-    font-family: "Poppins", sans-serif;
-    font-size: 14px;
-    overflow-y: hidden;
-    margin-bottom: 50px;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-.form{
-    margin-left: 5px;
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.loginBlock {
+    padding: 10px;
+    padding-bottom: 6rem;
+}
+
+.loginBlockInput{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
 }
 
 .welcome_text {
-    font-family: "Poppins", sans-serif;
-    z-index: 2;
-    margin-top: 35px;
-    display: flex;
-    flex-direction: column;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .welcome_text h2 {
     font-weight: 600;
-    font-size: 25px;
-    line-height: 40px;
+    font-size: 30px;
     color: #12AA04;
-    text-align: center;
-}
-
-
-.welcome_text i{
-    border: 1px solid black;
-    padding: 5px;
-    display: block;
-    width: 20px;
-    margin-left: 10px;
-    cursor: pointer;
 }
 
 .welcome_text p {
     font-size: 14px;
     font-weight: 400;
-    line-height: 21px;
-    text-align: center;
 }
 
-input,
-.selectLabel {
-    background-color: #F1F4FF;
-    width: 85%;
-    color: #626262;
-    margin: 1rem 1rem .5rem 1rem;
+.form {
+    width: 100%;
+    max-width: 600px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.form_div {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.form_div input,
+.form_div select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
     border-radius: 7px;
-    border: none;
-    padding: 15px;
-}
-
-.selectLabel{
-    padding: 12px;
-}
-
-
-.selectLabel select{
     background-color: #F1F4FF;
-    width: 55%;
-    margin-left: 8px;
-    padding: 5px;
-    border: none;
-    color: black;
+    transition: border-color 0.3s;
 }
 
-#registerForm{
-    overflow-y: hidden;
+.form_div input:focus,
+.form_div select:focus {
+    border-color: #12AA04;
+    outline: none;
 }
 
-.commonInput input{
-    padding: 15px;
-}
-
-::placeholder {
-    color: #626262;
-}
-
-input[type="email"] {
-    padding: 12px;
-}
-
-input[type="password"] {
-    padding: 12px;
+.textDanger {
+    color: red;
+    font-size: 0.8rem;
+    margin-top: 5px;
 }
 
 input[type="submit"] {
@@ -94,47 +78,47 @@ input[type="submit"] {
     color: white;
     padding: 12px;
     font-weight: bold;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+input[type="submit"]:hover {
+    background: #c87a00;
 }
 
 .create {
     text-align: center;
-    font-size: 14px;
+    font-size: 0.9rem;
+    color: #12AA04;
     cursor: pointer;
 }
 
-.donationLabel{
-    background-color: #F1F4FF;
-    width: 85%;
-    margin-left: 19px;
-    border-radius: 7px;
-    padding: 12px;
-    border: none;
-    background-color: #F1F4FF;
-    color: black;
-    margin-top: 16px;
+.alert {
+    margin: 0 auto;
+    padding: 10px;
+    width: 30rem;
+    font-size: .8rem;
 }
 
-.donationLabel label{
-    color: #626262;
+.alert button {
+    border-radius: 50%;
+    margin-left: 10rem;
+    width: 1.3rem;
 }
 
-.donationLabel select{
-    border: none;
-    color: black;
-    background-color: #F1F4FF;
+label {
     padding: 6px;
-    width: 36%;
-}
-
-.donation input{
-    margin-left: 20px;
-    padding: 12px;
 }
 
 
-.textDanger{
-   margin-left: 20px;
-   margin-top: -20px;
-   color: red;
-   font-weight: bold;
+.welcome_text i {
+    border: 1px solid black;
+    padding: 5px;
+    width: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
